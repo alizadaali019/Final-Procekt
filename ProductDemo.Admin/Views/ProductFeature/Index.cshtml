@@ -1,0 +1,56 @@
+﻿@using System.Web.UI.WebControls
+@model IEnumerable<ProductDemo.Data.Model.ProductFeature>
+@{
+    ViewBag.Title = "Urun Ozellikleri";
+}
+
+<h2>@ViewBag.SelectedProduct.ProductName Ozellikleri</h2>
+
+<p>
+    @Html.ActionLink("Yeni Ozellik","Create",new { id = ViewBag.SelectedProduct.ProductId }, new { })
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model=>model.FeatureName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FeatureValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HeadLine)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Desciription)
+        </th>
+    </tr>
+    @Html.Hidden("selectedProductId", (string)ViewBag.SelectedProduct.ProductId.ToString(), new { })
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FeatureName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FeatureValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HeadLine)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Desciription)
+            </td>
+            <td>
+                @Html.ActionLink("Duzenle", "Edit", new { id=item.ProductFeatureId, productId = ViewBag.SelectedProduct.ProductId }) |
+                @Html.ActionLink("Detaylar", "Details", new { id = item.ProductFeatureId, productId = ViewBag.SelectedProduct.ProductId }) |
+                @Html.ActionLink("Sil", "Delete", new { id = item.ProductFeatureId }) |
+            </td>
+        </tr>
+    }
+</table>
+<div>
+    @Html.ActionLink("Listeye Don","Index","Product")
+</div>
+

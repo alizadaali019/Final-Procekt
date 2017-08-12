@@ -1,0 +1,61 @@
+﻿@model ProductDemo.Data.Model.ProductFeature
+
+@{
+    ViewBag.Title = "Urun Ozelliyi Silme";
+}
+
+<h2>Urun Ozelliyi Silme</h2>
+
+<h3>Bu Urun Ozelliyini silmek istediyinize eminmisiniz?</h3>
+<div>
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Product.ProductName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Product.ProductName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FeatureName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FeatureName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FeatureValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FeatureValue)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HeadLine)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HeadLine)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Desciription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Desciription)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-default" /> |
+            @Html.Hidden("productId",Model.ProductId)
+            @Html.ActionLink("Listeye Don", "Index",new { id=Model.ProductId})
+        </div>
+    }
+</div>

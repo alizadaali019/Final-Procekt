@@ -1,0 +1,42 @@
+﻿@model ProductDemo.Data.Model.Product
+@using ProductDemo.Admin.Helpers
+@{
+    ViewBag.Title = "Urun Detayi";
+}
+
+<h2>Urun Detayi</h2>
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model=>model.Category.CategoryName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Category.CategoryName)
+        </dd>
+    </dl>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model=>model.ProductName)
+        </dd>
+    </dl>
+    @{
+        var productFirstImage = Model.ProductImages.FirstOrDefault();
+        if (productFirstImage != null)
+        {
+           <dl class="dl-horizontal">
+               <dt></dt>
+               <dd>
+                   @Html.Base64Image(productFirstImage)
+               </dd>
+           </dl>
+        }
+    }
+    <p>
+        @Html.ActionLink("Duzenleme", "Edit", new { id = Model.ProductId }) |
+        @Html.ActionLink("Listeye Don","Index")
+    </p>
+</div>
+

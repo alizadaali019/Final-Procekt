@@ -1,0 +1,12 @@
+C:\Users\aliza\documents\visual studio 2015\Projects\ProductDemo\ProductDemo.Console\bin\Debug\ProductDemo.Console.exe.config
+C:\Users\aliza\documents\visual studio 2015\Projects\ProductDemo\ProductDemo.Console\bin\Debug\ProductDemo.Console.exe
+C:\Users\aliza\documents\visual studio 2015\Projects\ProductDemo\ProductDemo.Console\bin\Debug\ProductDemo.Console.pdb
+C:\Users\aliza\documents\visual studio 2015\Projects\ProductDemo\ProductDemo.Console\bin\Debug\EntityFramework.dll
+C:\Users\aliza\documents\visual studio 2015\Projects\ProductDemo\ProductDemo.Console\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\aliza\documents\visual studio 2015\Projects\ProductDemo\ProductDemo.Console\bin\Debug\ProductDemo.Data.dll
+C:\Users\aliza\documents\visual studio 2015\Projects\ProductDemo\ProductDemo.Console\bin\Debug\ProductDemo.Data.pdb
+C:\Users\aliza\documents\visual studio 2015\Projects\ProductDemo\ProductDemo.Console\bin\Debug\EntityFramework.xml
+C:\Users\aliza\documents\visual studio 2015\Projects\ProductDemo\ProductDemo.Console\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\aliza\documents\visual studio 2015\Projects\ProductDemo\ProductDemo.Console\obj\Debug\ProductDemo.Console.csprojResolveAssemblyReference.cache
+C:\Users\aliza\documents\visual studio 2015\Projects\ProductDemo\ProductDemo.Console\obj\Debug\ProductDemo.Console.exe
+C:\Users\aliza\documents\visual studio 2015\Projects\ProductDemo\ProductDemo.Console\obj\Debug\ProductDemo.Console.pdb

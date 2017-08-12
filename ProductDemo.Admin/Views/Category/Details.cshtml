@@ -1,0 +1,21 @@
+﻿@model ProductDemo.Data.Model.Category
+@{
+    ViewBag.Title = "Kategori Detayi";
+}
+
+<h2>Kategori Detayi</h2>
+
+<div>
+    <dl>
+        <dt>
+            @Html.DisplayNameFor(model=>model.CategoryName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model=>model.CategoryName)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Duzenle", "Edit", new { id = Model.CategoryId }) |
+    @Html.ActionLink("Listeye Don", "Index")
+</p>
